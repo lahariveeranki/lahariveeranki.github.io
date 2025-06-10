@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Resume</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px auto;
             padding: 20px;
-            border: 2px solid #000;
             max-width: 800px;
             background-color: #f9f9f9;
         }
@@ -20,11 +19,38 @@
             margin-bottom: 20px;
         }
         header {
+            /* No specific styles here, container inside will handle */
+        }
+
+        /* New container wrapping contact info and photo */
+        .contact-photo-container {
+            background-color: rgb(206, 198, 198);
+            padding: 20px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 20px; /* space between contact and photo */
             flex-wrap: wrap;
+            box-sizing: border-box;
+            max-width: 100%;
         }
+
+        .contact-info {
+            flex: 1;
+            min-width: 250px;
+            background: none; /* remove old bg */
+            padding: 0; /* container provides padding */
+        }
+
+        .photocontainer {
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         header img {
             width: 140px;
             height: 140px;
@@ -32,7 +58,9 @@
             object-position: top;
             border-radius: 50%;
             border: 3px solid #ccc;
+            display: block;
         }
+
         a {
             color: #0066cc;
             text-decoration: none;
@@ -40,21 +68,28 @@
         a:hover {
             text-decoration: underline;
         }
-        .contact-info {
-            flex: 1;
-            min-width: 250px;
+
+        /* Section headers background */
+        section h2 {
+            background-color: rgb(206, 198, 198);
+            padding: 5px 10px;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="contact-info">
-            <h1>LAHARI</h1>
-            <p>Email: <a href="mailto:lahariveerankiec141@gmail.com">lahariveerankiec141@gmail.com</a> | Phone: +91 6309459913</p>
-            <p>Location: ELURU, INDIA</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/lahari-veeranki-417274346" target="_blank">linkedin.com/in/lahari-veeranki-417274346</a></p>
+        <div class="contact-photo-container">
+            <div class="contact-info">
+                <h1>LAHARI</h1>
+                <p>Email: <a href="mailto:lahariveerankiec141@gmail.com">lahariveerankiec141@gmail.com</a> | Phone: +91 6309459913</p>
+                <p>Location: ELURU, INDIA</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/lahari-veeranki-417274346" target="_blank">linkedin.com/in/lahari-veeranki-417274346</a></p>
+            </div>
+            <div class="photocontainer">
+                <img src="profile.jpg" alt="Profile Photo" />
+            </div>
         </div>
-        <img src="profile.jpg" alt="Profile Photo">
     </header>
 
     <section class="section">
@@ -80,9 +115,9 @@
     <section class="section">
         <h2>PROJECTS</h2>
         <ul>
-            <li>Moisture testing of food grains</li>
-            <li>Dual purpose alert and repellent system</li>
-            <li>Fire alarm system</li>
+            <li>Moisture testing of food grains.</li>
+            <li>Dual purpose alert and repellent system.</li>
+            <li>Fire alarm system.</li>
         </ul>
     </section>
 
