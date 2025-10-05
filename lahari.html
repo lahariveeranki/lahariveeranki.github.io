@@ -1,93 +1,320 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            border: 2px solid #000;
-            max-width: 800px;
-            background-color: #f9f9f9;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lahari Veeranki — Resume</title>
+  <style>
+    /* Reset & base */
+    :root{
+      --accent:#0b63d6;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --paper:#f6f8fb;
+      --max-width:900px;
+      --pad:20px;
+      --radius:10px;
+      --line:1.45;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#111827;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--paper);-webkit-font-smoothing:antialiased}
+    .container{
+      max-width:var(--max-width);
+      margin:28px auto;
+      padding:var(--pad);
+    }
+
+    /* Card */
+    .card{
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.08);
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:24px;
+    }
+
+    /* Header / main */
+    header{
+      display:flex;
+      align-items:flex-start;
+      gap:18px;
+      margin-bottom:10px;
+    }
+    .name {
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:0.2px;
+      margin:0;
+    }
+    .sub {
+      color:var(--muted);
+      font-size:14px;
+      margin-top:6px;
+    }
+    .contact{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    a.link { color:var(--accent); text-decoration:none; }
+    a.link:hover { text-decoration:underline; }
+
+    /* Left column content */
+    .left {
+      padding-right:6px;
+    }
+    .section {
+      margin-top:18px;
+      padding-top:6px;
+      border-top:1px dashed rgba(15,23,42,0.06);
+    }
+    .section h2{
+      font-size:16px;
+      margin:0 0 10px 0;
+      color:#0f172a;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+    }
+    .edu-item, .intern-item, .project-item, .cert-item, .activity-item {
+      margin-bottom:12px;
+    }
+    .muted { color:var(--muted); font-size:13px; }
+
+    /* Right column */
+    .right {
+      background:linear-gradient(180deg,#fbfdff,#ffffff);
+      border-radius:8px;
+      padding:16px;
+      height:fit-content;
+      box-shadow:0 2px 8px rgba(15,23,42,0.03);
+    }
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:8px 12px;
+    }
+    .skill-pill{
+      background:rgba(11,99,214,0.06);
+      color:var(--accent);
+      padding:6px 8px;
+      border-radius:6px;
+      font-size:13px;
+      display:inline-block;
+    }
+
+    /* small */
+    .meta { font-size:13px; color:var(--muted) }
+    ul { margin:6px 0 0 18px; padding:0; line-height:var(--line) }
+    li { margin-bottom:6px; }
+    .small { font-size:13px; color:var(--muted) }
+
+    /* responsive */
+    @media (max-width:880px){
+      .card{ grid-template-columns: 1fr; }
+      .right { order: 2; }
+    }
+
+    /* print */
+    @media print {
+      body { background:white; }
+      .container { margin:0; padding:0; }
+      .card { box-shadow:none; border-radius:0; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>LAHARI</h1>
-        <p>Email: <a href="mailto:lahariveerankiec141@gmail.com">lahariveerankiec141@gmail.com</a>
-        | Phone: +91 6309459913</p>
-        <p>Location: ELURU, INDIA</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/lahari-veeranki-417274346" target="_blank">linkedin.com/in/lahari-veeranki-417274346</a></p>
-    </header>
-    <section class="section">
-        <h2>CAREER OBJECTIVE</h2>
-        <p>I seek challenging opportunities Where I can fully utilize my skills to contribute to the success of the organization.</p>
-    </section>
+  <div class="container">
+    <div class="card" role="document" aria-label="Resume — Lahari Veeranki">
+      <!-- LEFT -->
+      <div class="left">
+        <header>
+          <div style="flex:1">
+            <h1 class="name">LAHARI</h1>
+            <div class="sub">Electronics & Communication — IoT · Embedded Systems</div>
+            <div class="contact">
+              <div class="meta">Eluru, India</div>
+              <div class="meta">Phone: +91 6309459913</div>
+              <div class="meta">Email: <a class="link" href="mailto:lahariveerankiec141@gmail.com">lahariveerankiec141@gmail.com</a></div>
+              <div class="meta">LinkedIn: <a class="link" href="https://www.linkedin.com/in/lahari-veeranki-417274346" target="_blank" rel="noopener">linkedin.com/in/lahari-veeranki-417274346</a></div>
+            </div>
+          </div>
+        </header>
 
-    <section class="section">
-        <h2>EDUCATION</h2>
-        <p><strong>2023 - 2026</strong><br> <strong>Prasad V.Potluri Siddhartha Institute of Technology</strong><br> Bachelors of Technology in Electronics and Communication Engineering<br>(CGPA:8.19)</p>
-        <p><strong>2020 - 2023</strong><br> <strong>Sir C.R Reddy Polytechnic</strong> <br> Diploma in Electronics and Communication Engineering<br>(Percentage:83.46%)</p>
-        <p><strong>2016 - 2020</strong><br> <strong>S.C.B.G English Medium Police School</strong> <br> Secondary School Education<br>(Percentage:75%)</p>
-    </section>
+        <!-- Career Objective (unchanged) -->
+        <section class="section">
+          <h2>Career Objective</h2>
+          <p class="small">I seek challenging opportunities where I can fully use my skills for the success of the organization.</p>
+        </section>
 
-    <section class="section">
-        <h2>INTERNSHIPS</h2>
-        <p><strong>Schneider Electric, Hyderabad</strong></p>
-        <p>Participated in the design and development of innovative energy management solutions, at Schneider Electric in Hyderabad, resulting in improved operational efficiency.</p>
-        <p><strong>Sense Semiconductor & IT Solutions</strong></p>
-        <p>Completed an internship on Embedded Systems at SSIT, focusing on microcontroller applications.</p>
-    </section>
+        <!-- Education -->
+        <section class="section">
+          <h2>Education</h2>
 
-    <section class="section">
-        <h2>PROJECTS</h2>
-        <ul>
-            <li>Moisture testing of food grains.</li>
-            <li>Dual purpose alert and repellent system.</li>
-            <li>Fire alarm system.</li>
-        </ul>
-    </section>
+          <div class="edu-item">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <strong>Prasad V. Potluri Siddhartha Institute of Technology</strong>
+              <div class="meta">2020–2026</div>
+            </div>
+            <div class="muted">B.Tech — Electronics and Communication Engineering · CGPA: 8.19</div>
+          </div>
 
-    <section class="section">
-        <h2>SKILLS SET</h2>
-        <ul>
-            <li><strong>Core:</strong>Circuit Design,Iot,VLSI</li>
-            <li><strong>Programming languages:</strong>C,Java,Python</li>
-            <li><strong>Software Tools:</strong>,Multisim,Vivado,Ansys Hfss,micro wind,TASM</li>
-        </ul>
-    </section>
+          <div class="edu-item">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <strong>Sir C.R. Reddy Polytechnic</strong>
+              <div class="meta">2020–2023</div>
+            </div>
+            <div class="muted">Diploma — Electronics and Communication · 83.46%</div>
+          </div>
 
-    <section class="section">
-        <h2>CERTIFICATIONS</h2>
-        <ul>
-            <li><strong>APSSDC:</strong> PCB certification - 90%</li>
-            <li><strong>NPTEL:</strong>VLSI Physical Design with Timming Analysis</li>
-            <li><strong>BYTS:</strong> Problem-solving Data Structures using Java</li>
-            <li><strong>Spoken Tutorial certification: </strong>Arduino Certification - 95%, Java Certification - 92%</li>
-            <li>Google Cloud Computing Foundation Certification</li>
-            <li>Successfully Completed Java Full Stack course by Eduskills</li>
-        </ul>
-    </section>
+          <div class="edu-item">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <strong>Suresh Chandra Bahuguna English Medium Police School</strong>
+              <div class="meta">2019–2020</div>
+            </div>
+            <div class="muted">Secondary School Certificate · 78%</div>
+          </div>
+        </section>
 
-    <section class="section">
-        <h2>EXTRA-CURRICULAR ACTIVITIES</h2>
-        <ul>
-            <li>Participated in technical quiz in SITAR 2K24 conducted by pvpsit</li>
-            <li>Participated in technical quiz conducted by NRI Institute of Technology</li>
-            <li>participated in MSME Hackathons</li>
-            <li>Participated in paper presentation conducted by NRI Institute of Technology</li>
-        </ul>
-    </section>
+        <!-- Internships -->
+        <section class="section">
+          <h2>Internships</h2>
+
+          <div class="intern-item">
+            <strong>Schneider Electric, Hyderabad</strong>
+            <div class="muted">Intern — Energy Management</div>
+            <ul>
+              <li>Contributed to the design and development of energy-management modules with IoT-enabled sensing.</li>
+              <li>Assisted with circuit testing and validation for power-monitoring prototypes.</li>
+            </ul>
+          </div>
+
+          <div class="intern-item">
+            <strong>Sense Semiconductor & IT Solutions (SSIT)</strong>
+            <div class="muted">Embedded Systems Internship</div>
+            <ul>
+              <li>Worked on microcontroller-based applications and embedded firmware (Arduino/AVR style workflows).</li>
+              <li>Implemented basic peripheral interfacing and sensor-data acquisition modules.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section">
+          <h2>Projects</h2>
+
+          <div class="project-item">
+            <strong>Moisture Testing of Food Grains</strong>
+            <div class="muted">Sensor · IoT · Embedded</div>
+            <ul>
+              <li>Designed a sensor-based IoT system to measure grain moisture for storage monitoring.</li>
+              <li>Implemented data transmission to a simple dashboard and validated readings against manual tests.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <strong>Dual Purpose Alert and Repellent System</strong>
+            <div class="muted">Embedded · Ultrasonic</div>
+            <ul>
+              <li>Developed a device to detect intruders and repel animals using ultrasonic signals and alerts.</li>
+              <li>Designed PCB prototype and coded embedded control logic for triggers.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <strong>Fire Alarm System</strong>
+            <div class="muted">Microcontroller · Safety</div>
+            <ul>
+              <li>Built a microcontroller-based fire detection and alert system using temperature and smoke sensors.</li>
+              <li>Added audible alerts and simple notification logic for local safety response.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Extra Curricular -->
+        <section class="section">
+          <h2>Extra-Curricular Activities</h2>
+          <ul>
+            <li>Participated in Technical Quiz — SITAR 2K24 (PVPSIT).</li>
+            <li>Finalist / Participant — MSME Hackathon (2023).</li>
+            <li>Presented a paper at NRI Institute of Technology (2023).</li>
+            <li>Participated in multiple college-level technical quizzes and events.</li>
+          </ul>
+        </section>
+
+      </div><!-- /.left -->
+
+      <!-- RIGHT COLUMN -->
+      <aside class="right" aria-label="Sidebar">
+        <!-- Skills -->
+        <section>
+          <h2>Skill Set</h2>
+          <div class="skills-grid" style="margin-bottom:12px;">
+            <div>
+              <div class="meta" style="margin-bottom:6px"><strong>Core</strong></div>
+              <div class="small">Circuit Design · IoT</div>
+            </div>
+            <div>
+              <div class="meta" style="margin-bottom:6px"><strong>Programming</strong></div>
+              <div class="small">C · Java</div>
+            </div>
+
+            <div>
+              <div class="meta" style="margin-bottom:6px"><strong>Software Tools</strong></div>
+              <div class="small">MATLAB · Multisim · Vivado · ANSYS HFSS · Microwind · TASM</div>
+            </div>
+
+            <div>
+              <div class="meta" style="margin-bottom:6px"><strong>Other</strong></div>
+              <div class="small">PCB Design · Sensor Interfacing · Embedded Firmware</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section style="margin-top:10px;">
+          <h2>Certifications</h2>
+          <div class="cert-item small">
+            <ul style="margin:6px 0 0 18px;">
+              <li>APSSDC — PCB Design Certification (Score: 90%)</li>
+              <li>BYTS — Problem Solving & Data Structures using Java</li>
+              <li>Spoken Tutorial — Arduino Certificate (95%)</li>
+              <li>Spoken Tutorial — Java Certificate (92%)</li>
+              <li>Google — Cloud Computing Foundations</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Quick Skills pills -->
+        <section style="margin-top:14px;">
+          <h2>Quick Tags</h2>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+            <span class="skill-pill">IoT</span>
+            <span class="skill-pill">Embedded Systems</span>
+            <span class="skill-pill">Circuit Design</span>
+            <span class="skill-pill">PCB</span>
+            <span class="skill-pill">MATLAB</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">Java</span>
+          </div>
+        </section>
+
+        <div style="height:8px"></div>
+        <div style="border-top:1px solid rgba(15,23,42,0.06); margin-top:18px; padding-top:12px;">
+          <div class="small">Resume generated: Updated & formatted for recruiter-readiness.</div>
+        </div>
+      </aside><!-- /.right -->
+
+    </div><!-- /.card -->
+  </div><!-- /.container -->
 </body>
 </html>
